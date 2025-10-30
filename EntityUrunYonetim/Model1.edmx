@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EntityUrunYonetimiDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EntityUrunYonetimiDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Tbl_Category">
           <Key>
             <PropertyRef Name="KategoriId" />
@@ -20,6 +20,7 @@
           <Property Name="MusteriAd" Type="nvarchar" MaxLength="50" />
           <Property Name="MusteriSoyad" Type="nvarchar" MaxLength="50" />
           <Property Name="Sehir" Type="nvarchar" MaxLength="50" />
+          <Property Name="Durum" Type="bit" />
         </EntityType>
         <EntityType Name="Tbl_Product">
           <Key>
@@ -97,8 +98,7 @@
             <End Role="Tbl_Sales" EntitySet="Tbl_Sales" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EntityUrunYonetimiDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -119,6 +119,7 @@
           <Property Name="MusteriSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Sehir" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Tbl_Sales" Relationship="Self.FK_Tbl_Sales_Tbl_Customer" FromRole="Tbl_Customer" ToRole="Tbl_Sales" />
+          <Property Name="Durum" Type="Boolean" />
         </EntityType>
         <EntityType Name="Tbl_Product">
           <Key>
@@ -217,6 +218,7 @@
           <EntitySetMapping Name="Tbl_Customer">
             <EntityTypeMapping TypeName="EntityUrunYonetimiDBModel.Tbl_Customer">
               <MappingFragment StoreEntitySet="Tbl_Customer">
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
                 <ScalarProperty Name="MusteriId" ColumnName="MusteriId" />
                 <ScalarProperty Name="MusteriAd" ColumnName="MusteriAd" />
                 <ScalarProperty Name="MusteriSoyad" ColumnName="MusteriSoyad" />

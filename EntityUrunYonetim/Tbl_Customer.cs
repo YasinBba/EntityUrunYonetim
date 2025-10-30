@@ -23,6 +23,7 @@ namespace EntityUrunYonetim
         public string MusteriAd { get; set; }
         public string MusteriSoyad { get; set; }
         public string Sehir { get; set; }
+        public Nullable<bool> Durum { get; set; }
     
         public virtual ICollection<Tbl_Sales> Tbl_Sales { get; set; }
     }
