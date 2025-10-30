@@ -46,7 +46,19 @@ namespace EntityUrunYonetim
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(TxtKategoriId.Text);
+            var kategori = db.Tbl_Category.Find(id);
+            kategori.KategoriAd = TxtKategoriAd.Text;
+            db.SaveChanges();
+            MessageBox.Show("Kategori Güncellendi");
+        }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            TxtKategoriId.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            TxtKategoriAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
         }
     }
 }
