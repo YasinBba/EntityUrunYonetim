@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EntityUrunYonetimiDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="EntityUrunYonetimiDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Tbl_Category">
           <Key>
             <PropertyRef Name="KategoriId" />
@@ -182,7 +182,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EntityUrunYonetimiDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EntityUrunYonetimiDBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Tbl_Category" EntityType="Self.Tbl_Category" />
           <EntitySet Name="Tbl_Customer" EntityType="Self.Tbl_Customer" />
           <EntitySet Name="Tbl_Product" EntityType="Self.Tbl_Product" />
@@ -205,7 +205,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EntityUrunYonetimiDBModelStoreContainer" CdmEntityContainer="EntityUrunYonetimiDBEntities">
+        <EntityContainerMapping StorageEntityContainer="EntityUrunYonetimiDBModelStoreContainer" CdmEntityContainer="EntityUrunYonetimiDBEntities1">
           <EntitySetMapping Name="Tbl_Category">
             <EntityTypeMapping TypeName="EntityUrunYonetimiDBModel.Tbl_Category">
               <MappingFragment StoreEntitySet="Tbl_Category">
@@ -264,7 +264,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>

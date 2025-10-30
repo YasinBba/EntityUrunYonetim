@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtKategoriId = new System.Windows.Forms.TextBox();
+            this.TxtKategoriAd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtnListele = new System.Windows.Forms.Button();
+            this.BtnEkle = new System.Windows.Forms.Button();
+            this.BtnGuncelle = new System.Windows.Forms.Button();
+            this.BtnSil = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -49,19 +49,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Kategori ID:";
             // 
-            // textBox1
+            // TxtKategoriId
             // 
-            this.textBox1.Location = new System.Drawing.Point(108, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
-            this.textBox1.TabIndex = 1;
+            this.TxtKategoriId.Location = new System.Drawing.Point(108, 42);
+            this.TxtKategoriId.Name = "TxtKategoriId";
+            this.TxtKategoriId.Size = new System.Drawing.Size(100, 27);
+            this.TxtKategoriId.TabIndex = 1;
             // 
-            // textBox2
+            // TxtKategoriAd
             // 
-            this.textBox2.Location = new System.Drawing.Point(108, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 27);
-            this.textBox2.TabIndex = 3;
+            this.TxtKategoriAd.Location = new System.Drawing.Point(108, 75);
+            this.TxtKategoriAd.Name = "TxtKategoriAd";
+            this.TxtKategoriAd.Size = new System.Drawing.Size(100, 27);
+            this.TxtKategoriAd.TabIndex = 3;
             // 
             // label2
             // 
@@ -72,44 +72,49 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Kategori Adı:";
             // 
-            // button1
+            // BtnListele
             // 
-            this.button1.Location = new System.Drawing.Point(12, 126);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 36);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Listele";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnListele.Location = new System.Drawing.Point(12, 126);
+            this.BtnListele.Name = "BtnListele";
+            this.BtnListele.Size = new System.Drawing.Size(97, 36);
+            this.BtnListele.TabIndex = 4;
+            this.BtnListele.Text = "Listele";
+            this.BtnListele.UseVisualStyleBackColor = true;
+            this.BtnListele.Click += new System.EventHandler(this.BtnListele_Click);
             // 
-            // button2
+            // BtnEkle
             // 
-            this.button2.Location = new System.Drawing.Point(115, 126);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 36);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Ekle";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnEkle.Location = new System.Drawing.Point(115, 126);
+            this.BtnEkle.Name = "BtnEkle";
+            this.BtnEkle.Size = new System.Drawing.Size(97, 36);
+            this.BtnEkle.TabIndex = 5;
+            this.BtnEkle.Text = "Ekle";
+            this.BtnEkle.UseVisualStyleBackColor = true;
+            this.BtnEkle.Click += new System.EventHandler(this.BtnEkle_Click);
             // 
-            // button3
+            // BtnGuncelle
             // 
-            this.button3.Location = new System.Drawing.Point(12, 168);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 36);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Güncelle";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Location = new System.Drawing.Point(12, 168);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(97, 36);
+            this.BtnGuncelle.TabIndex = 6;
+            this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
-            // button4
+            // BtnSil
             // 
-            this.button4.Location = new System.Drawing.Point(115, 168);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 36);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Sil";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnSil.Location = new System.Drawing.Point(115, 168);
+            this.BtnSil.Name = "BtnSil";
+            this.BtnSil.Size = new System.Drawing.Size(97, 36);
+            this.BtnSil.TabIndex = 7;
+            this.BtnSil.Text = "Sil";
+            this.BtnSil.UseVisualStyleBackColor = true;
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(232, 42);
             this.dataGridView1.Name = "dataGridView1";
@@ -122,16 +127,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 268);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.BtnSil);
+            this.Controls.Add(this.BtnGuncelle);
+            this.Controls.Add(this.BtnEkle);
+            this.Controls.Add(this.BtnListele);
+            this.Controls.Add(this.TxtKategoriAd);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtKategoriId);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -143,13 +148,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtKategoriId;
+        private System.Windows.Forms.TextBox TxtKategoriAd;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtnListele;
+        private System.Windows.Forms.Button BtnEkle;
+        private System.Windows.Forms.Button BtnGuncelle;
+        private System.Windows.Forms.Button BtnSil;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
