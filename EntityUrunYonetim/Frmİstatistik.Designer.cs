@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -88,16 +88,6 @@
             this.panel1.Size = new System.Drawing.Size(215, 116);
             this.panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(13, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Toplam Kategori Sayısı";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -107,6 +97,16 @@
             this.label2.Size = new System.Drawing.Size(33, 39);
             this.label2.TabIndex = 1;
             this.label2.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(13, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Toplam Kategori Sayısı";
             // 
             // panel2
             // 
@@ -434,9 +434,9 @@
             this.label24.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label24.Location = new System.Drawing.Point(13, 14);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(47, 19);
+            this.label24.Size = new System.Drawing.Size(176, 19);
             this.label24.TabIndex = 0;
-            this.label24.Text = "Label";
+            this.label24.Text = "Toplam Buzdolabı Sayısı";
             // 
             // Frmİstatistik
             // 
@@ -458,7 +458,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Frmİstatistik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

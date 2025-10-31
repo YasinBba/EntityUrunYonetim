@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2a52b9468e424d1e942282d495783dc1" Name="Diagram1">
+      <Diagram DiagramId="2a52b9468e424d1e942282d495783dc1" Name="Diagram1" ZoomLevel="88">
         <EntityTypeShape EntityType="EntityUrunYonetimiDBModel.Tbl_Category" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="EntityUrunYonetimiDBModel.Tbl_Customer" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="EntityUrunYonetimiDBModel.Tbl_Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
@@ -12,6 +12,7 @@
         <AssociationConnector Association="EntityUrunYonetimiDBModel.FK_Tbl_Product_Tbl_Category" ManuallyRouted="false" />
         <AssociationConnector Association="EntityUrunYonetimiDBModel.FK_Tbl_Sales_Tbl_Customer" ManuallyRouted="false" />
         <AssociationConnector Association="EntityUrunYonetimiDBModel.FK_Tbl_Sales_Tbl_Product" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EntityUrunYonetimiDBModel.Tbl_Admin" Width="1.5" PointX="5.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

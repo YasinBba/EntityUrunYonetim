@@ -12,6 +12,9 @@ namespace EntityUrunYonetim
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
+    using System.Linq;
     
     public partial class EntityUrunYonetimiDBEntities1 : DbContext
     {
@@ -29,5 +32,11 @@ namespace EntityUrunYonetim
         public DbSet<Tbl_Customer> Tbl_Customer { get; set; }
         public DbSet<Tbl_Product> Tbl_Product { get; set; }
         public DbSet<Tbl_Sales> Tbl_Sales { get; set; }
+        public DbSet<Tbl_Admin> Tbl_Admin { get; set; }
+    
+        public virtual ObjectResult<string> MarkaGetir()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("MarkaGetir");
+        }
     }
 }

@@ -26,6 +26,16 @@ namespace EntityUrunYonetim
            label11.Text = db.Tbl_Product.Sum(x => x.Stok).ToString();
             label21.Text = db.Tbl_Sales.Sum(x => x.Fiyat).ToString() + " TL ";
             label13.Text = (from x in db.Tbl_Product orderby x.Fiyat descending select x.UrunAd).FirstOrDefault();
+            label15.Text = (from x in db.Tbl_Product orderby x.Fiyat ascending select x.UrunAd).FirstOrDefault();
+            label9.Text = (from x in db.Tbl_Product
+                           join y in db.Tbl_Category
+                           on x.KategoriId equals y.KategoriId
+                           where y.KategoriAd == "Beyaz Eşya"
+                           select x).Count().ToString();
+            label23.Text = db.Tbl_Product.Count(x => x.UrunAd == "Buzdolabı").ToString();
+            label17.Text = (from x in db.Tbl_Customer select x.Sehir).Distinct().Count().ToString();
+            label21.Text = db.MarkaGetir().FirstOrDefault();
+
 
         }
     }
